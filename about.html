@@ -27,43 +27,74 @@
       margin: auto;
       padding: 20px;
     }
-    .site-header {
+    /* Header */
+    .header {
       background-color: #004080;
       color: #fff;
       padding: 20px;
       border-radius: 0 0 8px 8px;
     }
-    .site-header a {
-      color: #fff;
+    .header__title {
+      margin: 0;
     }
-    .site-nav ul {
+    .navigation {
+      margin-top: 10px;
+    }
+    .navigation__list {
       list-style: none;
       padding: 0;
       display: flex;
       gap: 15px;
     }
-    .about-intro, .skills, .history, .sidebar {
+    .navigation__item {}
+    .navigation__link {
+      color: #fff;
+    }
+    /* Main sections */
+    .about-article,
+    .skills,
+    .history,
+    .sidebar {
       background-color: #fff;
       margin: 20px 0;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    h1, h2, h3 {
+    /* About Article */
+    .about-article__title {
       margin-top: 0;
     }
-    ul {
+    .about-article__text {}
+    /* Skills */
+    .skills__title {
+      margin-top: 0;
+    }
+    .skills__list {
       padding-left: 20px;
     }
-    dl dt {
+    .skills__item {}
+    /* History */
+    .history__title {
+      margin-top: 0;
+    }
+    .history__list {}
+    .history__term {
       font-weight: bold;
       margin-top: 10px;
     }
-    dl dd {
+    .history__description {
       margin-left: 20px;
       margin-bottom: 10px;
     }
-    footer {
+    /* Sidebar */
+    .sidebar--values {}
+    .sidebar__list {
+      padding-left: 20px;
+    }
+    .sidebar__item {}
+    /* Footer */
+    .footer {
       text-align: center;
       background-color: #004080;
       color: #fff;
@@ -74,65 +105,64 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1 id="site-title">Наш навчальний лендінг</h1>
-    <nav class="site-nav" aria-label="Головна навігація">
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html" aria-current="page">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+  <header class="header">
+    <h1 class="header__title" id="site-title">Наш навчальний лендінг</h1>
+    <nav class="navigation" aria-label="Головна навігація">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a class="navigation__link" href="index.html">Головна</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="about.html" aria-current="page">Про нас</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="contacts.html">Контакти</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <section class="about-intro">
+    <section class="about-article">
       <header>
-        <h2>Хто ми?</h2>
+        <h2 class="about-article__title">Хто ми?</h2>
       </header>
-      <p>
+      <p class="about-article__text">
         Ми — команда студентів, які працюють над навчальним веб-проєктом у межах курсу
         <strong>«Web-програмування (1 семестр)»</strong>. Наша мета — навчитися створювати сучасні,
         доступні та структуровані веб-сторінки.
       </p>
     </section>
 
-    <section aria-labelledby="skills-title" class="skills">
-      <h3 id="skills-title">Що ми вміємо</h3>
-      <ul>
-        <li>Створення семантичної HTML-структури</li>
-        <li>CSS-стилізація, медіа-запити, адаптивність</li>
-        <li>JavaScript: робота з DOM, інтерактивність сторінок</li>
+    <section class="skills" aria-labelledby="skills-title">
+      <h3 class="skills__title" id="skills-title">Що ми вміємо</h3>
+      <ul class="skills__list">
+        <li class="skills__item">Створення семантичної HTML-структури</li>
+        <li class="skills__item">CSS-стилізація, медіа-запити, адаптивність</li>
+        <li class="skills__item">JavaScript: робота з DOM, інтерактивність сторінок</li>
       </ul>
     </section>
 
-    <section aria-labelledby="history-title" class="history">
-      <h3 id="history-title">Наш шлях</h3>
-      <dl>
-        <dt>2023</dt>
-        <dd>Перші базові проєкти та знайомство з HTML</dd>
+    <section class="history" aria-labelledby="history-title">
+      <h3 class="history__title" id="history-title">Наш шлях</h3>
+      <dl class="history__list">
+        <dt class="history__term">2023</dt>
+        <dd class="history__description">Перші базові проєкти та знайомство з HTML</dd>
 
-        <dt>2024</dt>
-        <dd>Створення командних pet-проєктів та участь у хакатонах</dd>
+        <dt class="history__term">2024</dt>
+        <dd class="history__description">Створення командних pet-проєктів та участь у хакатонах</dd>
 
-        <dt>2025</dt>
-        <dd>Робота над навчальним лендінгом у рамках лабораторної роботи</dd>
+        <dt class="history__term">2025</dt>
+        <dd class="history__description">Робота над навчальним лендінгом у рамках лабораторної роботи</dd>
       </dl>
     </section>
   </main>
 
-  <aside class="sidebar" aria-label="Додаткова інформація">
+  <aside class="sidebar sidebar--values" aria-label="Додаткова інформація">
     <h3>Наші цінності</h3>
-    <ul>
-      <li>Якість та чистота коду</li>
-      <li>Безперервний розвиток</li>
-      <li>Командність і взаємопідтримка</li>
+    <ul class="sidebar__list">
+      <li class="sidebar__item">Якість та чистота коду</li>
+      <li class="sidebar__item">Безперервний розвиток</li>
+      <li class="sidebar__item">Командність і взаємопідтримка</li>
     </ul>
   </aside>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <p>© 2025 Група 6.1213-1</p>
   </footer>
 </body>
 </html>
- 
