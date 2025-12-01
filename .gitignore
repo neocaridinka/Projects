@@ -1,0 +1,8 @@
+# Ігноруємо теку з налаштуваннями IDE
+.idea/
+# Visual Studio
+.vs/
+.idea/
+*.user
+*.suo
+*.cache
