@@ -11,69 +11,116 @@
 <body>
     <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
-    <header class="header">
-        <h1 class="header__title" id="site-title">Мій перший лендінг</h1>
-        <nav class="navigation" aria-label="Головна навігація">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="index.html" aria-current="page">Головна</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="about.html">Про нас</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="contacts.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="layout">
+        <!-- HEADER -->
+        <header class="header">
+            <h1 class="header__title" id="site-title">Мій перший лендінг</h1>
+            <nav class="nav" aria-label="Головна навігація">
+                <a class="nav__link" href="index.html" aria-current="page">Головна</a>
+                <a class="nav__link" href="about.html">Про нас</a>
+                <a class="nav__link" href="contacts.html">Контакти</a>
+            </nav>
+        </header>
 
-    <main class="main" id="main">
-        <article class="article">
-            <header>
+        <!-- SIDENAV -->
+        <aside class="sidenav">
+            <div class="sidebar">
+                <h3 class="sidebar__title">Корисні посилання</h3>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main" id="main">
+            <!-- Статті -->
+            <article class="article">
                 <h2 class="article__title">Новини</h2>
-            </header>
-            <p class="article__text">Бірюкова Ксенія Олександрівна почала роботу над HTML-каркасом.</p>
-            <figure class="media article__media media--framed">
-                <img src="assets/images/Студентка.jpg" alt="Фото студента" width="640" />
-                <figcaption>Це зображення для новини</figcaption>
-            </figure>
-        </article>
+                <p class="article__text">Бірюкова Ксенія Олександрівна почала роботу над HTML-каркасом.</p>
+                <figure class="media media--framed">
+                
+                </figure>
+            </article>
 
-        <section class="services" aria-labelledby="services-title">
-            <h3 class="services__title" id="services-title">Наші послуги</h3>
-            <table class="services__table">
-                <thead>
-                    <tr>
-                        <th class="services__header">Послуга</th>
-                        <th class="services__header">Опис</th>
-                        <th class="services__header">Ціна</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="services__cell">Розробка сайту</td>
-                        <td class="services__cell">Лендінг або невеликий корпоративний сайт</td>
-                        <td class="services__cell">500 $</td>
-                    </tr>
-                    <tr>
-                        <td class="services__cell">SEO-оптимізація</td>
-                        <td class="services__cell">Базовий аудит та покращення видимості</td>
-                        <td class="services__cell">300 $</td>
-                    </tr>
-                    <tr>
-                        <td class="services__cell">Підтримка</td>
-                        <td class="services__cell">Оновлення та технічна допомога</td>
-                        <td class="services__cell">100 $ / місяць</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+            <!-- Секція новин -->
+            <section class="news" aria-labelledby="news-title">
+                <h2 class="news__title" id="news-title">Останні новини</h2>
+                <div class="news__list">
+                    <article class="news-card">
+                        <figure class="media">
+                            <img class="media__img" src="assets/images/Картинка 1.jpg" alt="Фото зі студентського заходу" loading="lazy" decoding="async">
+                        </figure>
+                        <h3 class="news-card__title">Старт навчального веб-проєкту</h3>
+                        <p class="news-card__excerpt">Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JS та React…</p>
+                        <div class="news-card__meta">
+                            <time class="news-card__date" datetime="2025-09-10">10 вер 2025</time>
+                            <a href="#" class="news-card__btn">Читати далі</a>
+                        </div>
+                    </article>
 
-    <aside class="sidebar sidebar--links" aria-label="Додаткова інформація">
-        <h3>Корисні посилання</h3>
-        <ul>
-            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-        </ul>
-    </aside>
+                    <article class="news-card">
+                        <figure class="media">
+                            <img class="media__img" src="assets/images/Картинка 2.jpg" alt="Демонстрація лейаутів на уроці" loading="lazy" decoding="async">
+                        </figure>
+                        <h3 class="news-card__title">Flexbox + Grid: практика</h3>
+                        <p class="news-card__excerpt">На четвертій лекції розберемо одновимірний та двовимірний лейаути з практикою…</p>
+                        <div class="news-card__meta">
+                            <time class="news-card__date" datetime="2025-09-12">12 вер 2025</time>
+                            <a href="#" class="news-card__btn">Читати далі</a>
+                        </div>
+                    </article>
 
-    <footer class="footer">
-        <p>© 2025 Група 6.1213-1</p>
-    </footer>
+                    <article class="news-card">
+                        <figure class="media">
+                            <img class="media__img" src="assets/images/Картинка 3.jpg" alt="React" loading="lazy" decoding="async">
+                        </figure>
+                        <h3 class="news-card__title">React</h3>
+                        <p class="news-card__excerpt">Заплановано вивчення основ React…</p>
+                        <div class="news-card__meta">
+                            <time class="news-card__date" datetime="2025-09-15">15 вер 2025</time>
+                            <a href="#" class="news-card__btn">Читати далі</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Послуги -->
+            <section class="services" aria-labelledby="services-title">
+                <h3 class="services__title" id="services-title">Наші послуги</h3>
+                <table class="services__table">
+                    <thead>
+                        <tr>
+                            <th class="services__header">Послуга</th>
+                            <th class="services__header">Опис</th>
+                            <th class="services__header">Ціна</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="services__cell">Розробка сайту</td>
+                            <td class="services__cell">Лендінг або невеликий корпоративний сайт</td>
+                            <td class="services__cell">500 $</td>
+                        </tr>
+                        <tr>
+                            <td class="services__cell">SEO-оптимізація</td>
+                            <td class="services__cell">Базовий аудит та покращення видимості</td>
+                            <td class="services__cell">300 $</td>
+                        </tr>
+                        <tr>
+                            <td class="services__cell">Підтримка</td>
+                            <td class="services__cell">Оновлення та технічна допомога</td>
+                            <td class="services__cell">100 $ / місяць</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2025 Група 6.1213-1</p>
+        </footer>
+    </div>
 </body>
 </html>
