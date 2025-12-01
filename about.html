@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Про нас — Лабораторна 2</title>
+  <meta name="description" content="Інформація про команду, навички та розвиток навчального веб-проєкту." />
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header, footer, main, aside {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .site-header {
+      background-color: #004080;
+      color: #fff;
+      padding: 20px;
+      border-radius: 0 0 8px 8px;
+    }
+    .site-header a {
+      color: #fff;
+    }
+    .site-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    .about-intro, .skills, .history, .sidebar {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    dl dt {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    dl dd {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      background-color: #004080;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px 8px 0 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="site-title">Наш навчальний лендінг</h1>
+    <nav class="site-nav" aria-label="Головна навігація">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html" aria-current="page">Про нас</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="about-intro">
+      <header>
+        <h2>Хто ми?</h2>
+      </header>
+      <p>
+        Ми — команда студентів, які працюють над навчальним веб-проєктом у межах курсу
+        <strong>«Web-програмування (1 семестр)»</strong>. Наша мета — навчитися створювати сучасні,
+        доступні та структуровані веб-сторінки.
+      </p>
+    </section>
+
+    <section aria-labelledby="skills-title" class="skills">
+      <h3 id="skills-title">Що ми вміємо</h3>
+      <ul>
+        <li>Створення семантичної HTML-структури</li>
+        <li>CSS-стилізація, медіа-запити, адаптивність</li>
+        <li>JavaScript: робота з DOM, інтерактивність сторінок</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="history-title" class="history">
+      <h3 id="history-title">Наш шлях</h3>
+      <dl>
+        <dt>2023</dt>
+        <dd>Перші базові проєкти та знайомство з HTML</dd>
+
+        <dt>2024</dt>
+        <dd>Створення командних pet-проєктів та участь у хакатонах</dd>
+
+        <dt>2025</dt>
+        <dd>Робота над навчальним лендінгом у рамках лабораторної роботи</dd>
+      </dl>
+    </section>
+  </main>
+
+  <aside class="sidebar" aria-label="Додаткова інформація">
+    <h3>Наші цінності</h3>
+    <ul>
+      <li>Якість та чистота коду</li>
+      <li>Безперервний розвиток</li>
+      <li>Командність і взаємопідтримка</li>
+    </ul>
+  </aside>
+
+  <footer class="site-footer">
+    <p>© 2025 Група 6.1213-1</p>
+  </footer>
+</body>
+</html>
+ 
