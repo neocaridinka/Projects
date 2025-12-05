@@ -1,8 +1,9 @@
 {
   "name": "my-vite-app",
   "version": "1.0.0",
-  "description": "Vite project with Sass, PostCSS, and Autoprefixer",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +18,7 @@
     "eslint": "^9.39.1",
     "postcss": "^8.5.6",
     "sass": "^1.94.2",
-    "vite": "^7.2.6"
+    "vite": "^7.2.6",
+    "vite-plugin-handlebars": "^2.0.0"
   }
 }

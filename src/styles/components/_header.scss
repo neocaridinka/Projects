@@ -1,0 +1,11 @@
+.header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.header__title {
+    margin: 0;
+    padding: var(--space-4) var(--space-6) 0 var(--space-6);
+    font-size: var(--fs-h1);
+    color: var(--brand);
+}

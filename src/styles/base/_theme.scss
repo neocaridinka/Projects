@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0b0b2a;
+		--surface: #1a1a40;
+		--fg: #E6E6FA;
+		--fg-muted: #7B68EE;
+		--border: #000000;
+		--brand: #9370DB;
+		--brand-600: #6A5ACD;
+		--brand-100: #9370DB;
+	}
+
+	.sidebar,
+	.news-card,
+	.modal,
+	.card,
+	.panel {
+		background-color: var(--surface);
+		border-color: var(--border);
+	}
+
+	.news-card__meta {
+		color: color-mix(in srgb, var(--surface) 92%, #fff 8%);
+	}
+
+	.footer__contacts {
+		background: none;
+	}
+}

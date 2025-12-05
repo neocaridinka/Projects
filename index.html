@@ -1,38 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Лабораторна 2 - Головна</title>
-    <meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги." />
-    <link rel="icon" href="/images/favicon.ico" />
-    <!-- <link rel="stylesheet" href="styles.css" /> видаляємо старий CSS -->
-</head>
-<body>
-    <a class="skip-link" href="#main">Перейти до основного контенту</a>
-
-    <div class="layout">
-        <!-- HEADER -->
-        <header class="header">
-            <h1 class="header__title" id="site-title">Мій перший лендінг</h1>
-            <nav class="nav" aria-label="Головна навігація">
-                <a class="nav__link" href="index.html" aria-current="page">Головна</a>
-                <a class="nav__link" href="about.html">Про нас</a>
-                <a class="nav__link" href="contacts.html">Контакти</a>
-            </nav>
-        </header>
-
-        <!-- SIDENAV -->
-        <aside class="sidenav">
-            <div class="sidebar">
-                <h3 class="sidebar__title">Корисні посилання</h3>
-                <ul class="sidebar__list">
-                    <li class="sidebar__item">
-                        <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
+{{#> layout pageTitle="Головна" studentGroup="6/1213-1" studentEmail="k.biruykova03@gmail.com" }}
 
         <!-- MAIN CONTENT -->
         <main class="main" id="main">
@@ -149,5 +117,4 @@
     <!-- Підключаємо main.js через Vite -->
     <script type="module" src="/src/main.js"></script>
 
-</body>
-</html>
+{{/layout}}
