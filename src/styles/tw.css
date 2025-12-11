@@ -8,6 +8,8 @@
 }
 
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme static {
     $brand: #b9aaff;
     $brand-600: #9c8fff;
