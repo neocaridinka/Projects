@@ -1,0 +1,97 @@
+.contact-form {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-1);
+}
+
+.contact-form__item {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.contact-form__label {
+    font-weight: 600;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--fg);
+    background: #fff;
+    border: 1px solid #b0c7e6;
+    border-radius: var(--radius-1);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+
+    &:focus {
+        border-color: var(--brand);
+        box-shadow: 0 0 0 3px rgba(185,170,255,0.2);
+    }
+}
+
+.contact-form__textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.contact-form__button {
+    padding: var(--space-3) var(--space-6);
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover,
+    &:focus-visible {
+        background: var(--brand-600);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-form {
+        background: #0b0b2a;
+        border: 1px solid #4B0082;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .contact-form__label {
+        color: #fff;
+    }
+
+    .contact-form__input,
+    .contact-form__textarea {
+        background: #1a1a40;
+        color: #fff;
+        border: 1px solid #4B0082;
+
+        &::placeholder {
+            color: #b7bfd3;
+        }
+
+        &:focus {
+            border-color: #9370DB;
+            box-shadow: 0 0 0 3px rgba(147,112,219,0.3);
+        }
+    }
+
+    .contact-form__button {
+        background: #9370DB;
+        color: #fff;
+
+        &:hover,
+        &:focus-visible {
+            background: #7B68EE;
+        }
+    }
+}

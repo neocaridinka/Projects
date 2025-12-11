@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Лабораторна 2 - Головна</title>
-    <meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги." />
-    <link rel="icon" href="assets/images/favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <a class="skip-link" href="#main">Перейти до основного контенту</a>
-
-    <div class="layout">
-        <!-- HEADER -->
-        <header class="header">
-            <h1 class="header__title" id="site-title">Мій перший лендінг</h1>
-            <nav class="nav" aria-label="Головна навігація">
-                <a class="nav__link" href="index.html" aria-current="page">Головна</a>
-                <a class="nav__link" href="about.html">Про нас</a>
-                <a class="nav__link" href="contacts.html">Контакти</a>
-            </nav>
-        </header>
-
-        <!-- SIDENAV -->
-        <aside class="sidenav">
-            <div class="sidebar">
-                <h3 class="sidebar__title">Корисні посилання</h3>
-                <ul class="sidebar__list">
-                    <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-                </ul>
-            </div>
-        </aside>
+{{#> layout pageTitle="Головна" studentGroup="6/1213-1" studentEmail="k.biruykova03@gmail.com" }}
 
         <!-- MAIN CONTENT -->
         <main class="main" id="main">
             <!-- Статті -->
             <article class="article">
                 <h2 class="article__title">Новини</h2>
-                <p class="article__text">Бірюкова Ксенія Олександрівна почала роботу над HTML-каркасом.</p>
-                <figure class="media media--framed">
-                
-                </figure>
+                <p class="article__text">Поки що немає актуальних новин за останній місяць</p>
             </article>
 
             <!-- Секція новин -->
@@ -48,8 +15,16 @@
                 <h2 class="news__title" id="news-title">Останні новини</h2>
                 <div class="news__list">
                     <article class="news-card">
-                        <figure class="media">
-                            <img class="media__img" src="assets/images/Картинка 1.jpg" alt="Фото зі студентського заходу" loading="lazy" decoding="async">
+                        <figure class="news-card__media media">
+                            <picture>
+                                <source type="image/avif" srcset="/images/Картинка-1.avif">
+                                <source type="image/webp" srcset="/images/Картинка-1.webp">
+                                <img src="/images/Картинка-1.jpg"
+                                     alt="Фото зі студентського заходу"
+                                     class="media__img"
+                                     width="640" height="360"
+                                     loading="lazy" decoding="async" />
+                            </picture>
                         </figure>
                         <h3 class="news-card__title">Старт навчального веб-проєкту</h3>
                         <p class="news-card__excerpt">Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JS та React…</p>
@@ -60,8 +35,16 @@
                     </article>
 
                     <article class="news-card">
-                        <figure class="media">
-                            <img class="media__img" src="assets/images/Картинка 2.jpg" alt="Демонстрація лейаутів на уроці" loading="lazy" decoding="async">
+                        <figure class="news-card__media media">
+                            <picture>
+                                <source type="image/avif" srcset="/images/Картинка-2.avif">
+                                <source type="image/webp" srcset="/images/Картинка-2.webp">
+                                <img src="/images/Картинка-2.jpg"
+                                     alt="Демонстрація лейаутів на уроці"
+                                     class="media__img"
+                                     width="640" height="360"
+                                     loading="lazy" decoding="async" />
+                            </picture>
                         </figure>
                         <h3 class="news-card__title">Flexbox + Grid: практика</h3>
                         <p class="news-card__excerpt">На четвертій лекції розберемо одновимірний та двовимірний лейаути з практикою…</p>
@@ -72,8 +55,16 @@
                     </article>
 
                     <article class="news-card">
-                        <figure class="media">
-                            <img class="media__img" src="assets/images/Картинка 3.jpg" alt="React" loading="lazy" decoding="async">
+                        <figure class="news-card__media media">
+                            <picture>
+                                <source type="image/avif" srcset="/images/Картинка-3.avif">
+                                <source type="image/webp" srcset="/images/Картинка-3.webp">
+                                <img src="/images/Картинка-3.jpg"
+                                     alt="React"
+                                     class="media__img"
+                                     width="640" height="360"
+                                     loading="lazy" decoding="async" />
+                            </picture>
                         </figure>
                         <h3 class="news-card__title">React</h3>
                         <p class="news-card__excerpt">Заплановано вивчення основ React…</p>
@@ -122,5 +113,8 @@
             <p>© 2025 Група 6.1213-1</p>
         </footer>
     </div>
-</body>
-</html>
+
+    <!-- Підключаємо main.js через Vite -->
+    <script type="module" src="/src/main.js"></script>
+
+{{/layout}}
